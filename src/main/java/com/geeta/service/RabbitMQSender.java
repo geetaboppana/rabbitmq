@@ -31,7 +31,8 @@ public class RabbitMQSender {
 			amqpTemplate.convertAndSend(exchange, routingkey2, company);
 		}
 		
-
+        //amqpTemplate.send(routingkey2,company);
+        amqpTemplate.convertAndSend(routingkey2, company);
 		System.out.println("Send msg = " + company);
 	    
 	}
